@@ -1,0 +1,219 @@
+:root {
+    /* Color */
+    --white-color: #fff;
+    --black-color: #140a00;
+    --blue--color: #045fd4;
+    --red-color: #ff0000;
+    --grey-dark-color: #909090;
+    --grey-light-color: #e0e0e0;
+
+    /* Size */
+    --padding: 20px;
+    --avatar-size: 36px;
+
+    /* Font size */
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+    
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding);
+    background-color: var(--black-color);
+    color: var(--white-color);
+    justify-content: center;
+}
+
+header .logo i {
+    color: var(--red-color);
+}
+
+header .search .fa-search {
+    margin-left: 15px;
+    margin-right: var(--padding);
+}
+/* fas fa-search 하면 인식을 못함 띄어쓰기는 빼고해야할듯 */
+
+section.player {
+    text-align: center;
+    background-color: var(--black-color);
+    position: sticky;
+    top: 0;
+}
+/* section .player 했더니 안 됐었다.
+띄어쓰기를 하면 안 된다.
+ section.player 이렇게 해줘야 한다. */
+
+section video{
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+}
+
+.middle, .down {
+    padding: var(--padding);
+    text-align: center;
+}
+
+.Hashtag {
+    display: flex;;
+    color: var(--blue--color);
+    font-size: var(--font-small);
+    justify-content: center;
+}
+
+.Hashtag li {
+    margin-right: var(--padding);
+}
+
+.smalltitle {
+    font-size: var(--font-micro);
+    color: var(--grey-dark-color);
+}
+
+ul {
+    list-style-type: none;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+button, button:focus {
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+
+}
+
+.fa-thumbs-up {
+    color: var(--blue--color);
+    font-size: var(--font-large);
+}
+
+.channel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--grey-light-color);
+    border-bottom: 1px solid var(--grey-light-color);
+}
+
+/* id는 띄어쓰기하면 안 된다. 겹친 것이 문제였다. */
+
+.channelinfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    margin-right: var(--padding);
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+}
+
+.metades {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nosub {
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+.subscriveBtn {
+    padding: 3%;
+    background: var(--grey-light-color);
+}
+
+.subscriveBtn button {
+    color: var(--red-color);
+    font-size: medium;
+}
+
+
+/* button 이 한 번에 다 적용되어있어서
+위를 수정했더니 작동함. */
+
+.down {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.Upnext {
+    color: var(--grey-dark-color);
+    font-size: var(--font-small);
+    padding-bottom: 5px;
+}
+
+.down img {
+    flex-basis: 30%;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+
+.middle {
+    justify-content: center;
+}
+.metadata {
+    flex-basis: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.morebutton {
+    top:0;
+    flex-basis: 5%;
+    height: 100%;
+}
+
+.desc {
+    font-size: var(--font-micro);
+    color: var(--grey-dark-color);
+}
+
+.ici button {
+    border: solid 5px;
+    padding: 10px;
+    border-color: lightgoldenrodyellow;
+    border-radius: 20%;
+    color: var(--red-color);
+    font-size: medium;
+}
+
+@media screen and (min-width: 768px) {
+    .middledown {
+        display: flex;
+        flex-direction: row;
+        margin: var(--padding);
+        justify-content: center;    
+    }
+}
